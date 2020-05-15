@@ -75,6 +75,9 @@
 # [*logremotecommands*]
 #   Enable logging of executed shell commands as warnings.
 #
+# [*logtype*]
+#   Whether logs are written to syslog, file, or console
+#
 # [*logfile*]
 #   Name of log file.
 #
@@ -355,6 +358,7 @@ class zabbix::proxy (
   $sourceip                        = $zabbix::params::proxy_sourceip,
   Integer[0] $enableremotecommands = $zabbix::params::proxy_enableremotecommands,
   Integer[0] $logremotecommands    = $zabbix::params::proxy_logremotecommands,
+  $logtype                         = $zabbix::params::proxy_logtype,
   $logfile                         = $zabbix::params::proxy_logfile,
   $logfilesize                     = $zabbix::params::proxy_logfilesize,
   $debuglevel                      = $zabbix::params::proxy_debuglevel,
