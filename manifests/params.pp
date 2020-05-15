@@ -368,6 +368,7 @@ class zabbix::params {
   $proxy_loadmodule                         = undef
   $proxy_loadmodulepath                     = '/usr/lib/modules'
   $proxy_localbuffer                        = '0'
+  $proxy_logtype                            = 'file'
   $proxy_logfile                            = '/var/log/zabbix/zabbix_proxy.log'
   $proxy_logfilesize                        = '10'
   $proxy_logremotecommands                  = 0
