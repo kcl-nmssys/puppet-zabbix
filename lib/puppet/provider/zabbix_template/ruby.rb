@@ -20,6 +20,11 @@ Puppet::Type.type(:zabbix_template).provide(:ruby, parent: Puppet::Provider::Zab
         groups: {
           createMissing: true
         },
+        httptests: {
+          createMissing: true,
+          deleteMissing: true,
+          updateExisting: true
+        },
         images: {
           createMissing: true,
           updateExisting: true
