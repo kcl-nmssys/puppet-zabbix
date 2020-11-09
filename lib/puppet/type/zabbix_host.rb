@@ -106,6 +106,10 @@ Puppet::Type.newtype(:zabbix_host) do
 
   newproperty(:proxy) do
     desc 'Whether it is monitored by an proxy or not.'
+    
+    def insync?(is)
+      is == should || (is == :absent && (should.empty? || should.nil?))
+    end
   end
 
   autorequire(:file) { '/etc/zabbix/api.conf' }
