@@ -60,7 +60,7 @@ Puppet::Type.type(:zabbix_host).provide(:ruby, parent: Puppet::Provider::Zabbix)
         {
           type: 1,
           main: 1,
-          ip: @resource[:ipaddress],
+          ip: @resource[:ipaddress] || "",
           dns: @resource[:hostname],
           port: @resource[:port],
           useip: @resource[:use_ip] ? 1 : 0
